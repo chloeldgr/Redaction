@@ -1,0 +1,14 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Mise en contexte}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Fabrication de pièces en silicone}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}La fabrication additive et la robotisation du processus}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Problématique du sujet de thèse}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Objectifs et analyse fonctionnelle}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Système actuel}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Conception d'une structure d'impression instrumentée}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Premiers tests}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Deux axes de recherche priviligiés}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Modélisation d'un cordon de silicone}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Gestion de la forme d'un cordon}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Gestion de la dynamique d'extrusion}{3}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Conclusion et perspectives}{3}{section.4}%

@@ -1,0 +1,255 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{mathrsfs}
+\usepackage{lipsum} % Juste pour le texte d'exemple
+\usepackage{graphicx}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{import}
+\usepackage{xcolor}
+\usepackage{float} 
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage{subcaption}
+\graphicspath{{figures/}}
+\usepackage{url}
+\usepackage[colorlinks,linkcolor=red,anchorcolor=green,citecolor=blue]{hyperref}
+\usepackage[figurename=FIGURE]{caption}
+\usepackage[tablename=TABLEAU]{caption}
+\captionsetup{position=below}
+\captionsetup[figure]{font={small,sl},labelfont=small} %changer titre des figures
+\usepackage{hyperref}
+
+
+% \captionsetup[table]{font={small,it},labelfont=small} %changer titre des tableaux
+
+% section title size
+\usepackage{titlesec}
+\titleformat*{\section}{\huge\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm,headheight=13.6pt}
+
+
+% extra section for paragraph
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+% % biblio 
+% \usepackage[
+% backend=biber,
+% style=numeric,
+% sorting=nyt
+% ]{biblatex}
+% \usepackage{csquotes}
+
+\hypersetup{
+    colorlinks,
+    citecolor = red,
+    filecolor = blue,
+    linkcolor = blue,
+    urlcolor = blue
+}
+
+\usepackage{fancyhdr,graphicx,lastpage}
+\fancypagestyle{plain}{
+  \fancyhf{}% Clear header/footer
+  \fancyhead[R]{\textit{Synthèse CSI}}% Right header
+  \fancyhead[L]{\textit{Chloé Lindingre}}% Right header
+  \fancyfoot[L]{\textit{07/06/2024}}% Left footer
+  \fancyfoot[R]{\thepage\  /~\pageref{LastPage}}% Right footer
+}
+\pagestyle{plain}% Set page style to plain.
+
+
+% \title{\textbf{Synthèse pour le Comité de Suivi Individuel}}
+
+% \date{}
+
+\begin{document}
+\pagestyle{empty}
+
+% Declare new goemetry for the title page only.
+\newgeometry{margin=2 cm}
+\newcommand\titleofdoc{\bfseries SYNTHESE DU COMITE DE SUIVI INDIVIDUEL}
+        
+    \begin{titlepage}
+
+       \begin{center}
+            \vspace*{1.5cm} % Adjust spacings to ensure the title page is generally filled with text
+            %\noindent\rule[0.25\baselineskip]{\textwidth}{1pt}
+            \Huge{\titleofdoc} \\
+            \vspace{4cm}
+            \Huge{``Fabrication additive robotisée de silicone assistée par l'intelligence artificielle''}\\
+            \vspace{0.8 cm}
+            \LARGE{\textbf{Chloé Lindingre, 1ère année de doctorat}}\\
+            
+            \vspace{0.5 cm}
+            \LARGE{Laboratoire ICube} \\
+            \vspace{5.5 cm}
+            \Large{\textbf{Encadrement}~:~Pierre Renaud~-~Laurent Barbé~-~François Geiskopf} \\
+            \vspace{0.5 cm}
+            \Large{\textbf{Membres du CSI}~: Yann Quinsat~-~Edwin-Joffrey Courtial} \\
+            
+            
+            \vspace{0.5 cm}
+            \Large{\textbf{Date du CSI}~:}Le 7 juin 2024
+            \begin{figure}[b]
+                \centering
+                \includegraphics[width= \columnwidth]{logo_ecoles.png}
+            \end{figure}
+        \end{center}
+    \setcounter{page}{0}
+    \end{titlepage}
+\restoregeometry\newpage
+\setcounter{page}{1}
+\pagestyle{plain}
+
+
+% \maketitle % Nous n'incluons pas de page de garde
+
+
+\section*{Mise en contexte}
+    Le silicone est un matériau présentant des propriétés intéressantes telles qu'une bonne résistance aux compressions et tractions. Sa dureté peut être modulable et une fois réticulé, il peut être étanche et servir d'isolant éléctrique. Enfin, il peut être biocompatible et stérilisé. Ces caractéristiques lui permettent d'avoir des applications dans de nombreux domaines, notamment dans le domaine médical avec la fabrication d'implant et de prothèse ou encore dans la robotique, avec la fabrication de robots souples. Ces applications sont illustrées sur la Figure~\ref{fig:applications}. 
+
+    \begin{figure}[H]
+        \centering
+        \def\svgwidth{0.5\columnwidth}\input{figures/applications.pdf_tex}
+        \caption{(a) Prothèse d'un nez~\cite{zare2021silicone}, (b) Prothèse d'une valve aortique et son système vasculaire~\cite{coulter2019bioinspired} et (c) Robot souple Pneunet~[Loïc Mosser]}~\label{fig:applications}
+    \end{figure}
+    
+    De manière conventionnelle, les pièces en silicone sont fabriquées par moulage, donc plusieurs procédés apparaissent à la Figure~\ref{fig:moulage}. Cette technique impose de concevoir et fabriquer un moule propre à la pièce. Cela peut être très coûteux lorsqu'il s'agit de pièces fabriquées en petite série. De plus, il est nécessaire de savoir gérer l'ajout et le retrait de noyaux dans la pièce dans le cas de pièces présentant des cavités. Ces aléas rendent la technique très restrictive en termes de forme de pièces à effectuer et qui imposent leur conception en grande série.
+
+    \begin{figure}[H]
+        \centering
+        \def\svgwidth{\columnwidth}\input{figures/Moulage_silicone.pdf_tex}
+        \caption{Différentes techniques de moulage de pièce en silicone}~\label{fig:moulage}
+    \end{figure}
+
+
+
+    Dû aux limites du moulage, beaucoup de chercheurs se sont focalisés sur la recherche d'alternatives. Pour ceci, il existe des techniques de Fabrication Additive (\textbf{FA}) de pièce en silicone qui permettent de palier ces problèmes. Parmis ces techniques, le Direct Ink Writing (\textbf{DIW}) ou Liquid Deposition Modeling (\textbf{LDM}) consiste en la dépose couche par couche de silicone liquide à la façon d'une imprimante 3D classique aussi appelé Fused Deposition Modeling (\textbf{FDM}). Cette alternative permet le prototypage rapide et facile, la production en petite série voire de manière unique, contrairement au moulage. Cette nouvelle technique adopte une autre façon de fabriquer des pièces, qui peuvent avoir des formes plus complexes.  
+
+    Le silicone est caractérisé par ses proprités intrinsèques, comme sa viscosité et le taux de cisaillement associé~\cite{lefort1983silicones}. Contrairement à la FDM, il reste fluide durant un certain temps, aussi appelé temps de polymérisation, propre au silicone, après son extrusion. Ces caractéristiques spécifiques ont une influence sur l'impression, pouvant par exemple provoquer l'effondremment de la pièce durant l'impression dû à des forces extérieures comme la gravité. De plus, l'ajout d'une buse peut aussi provoquer des phénomènes tels que le gonflement en sortie de filière aussi nommé ``die swelling''. Cela fait donc du silicone un matériau dont le comportement est difficile à anticiper durant et après impression.~\\ 
+
+    L'impression cartésienne, dite classique, présente elle aussi des limites indépendantes du matériau utilisé. Imprimer selon trois axe peut engendrer des défauts sur l'état de surface de la pièce finale, avec un effet escalier qui se forme à cause du dépôt planaire. Il arrive également, lors d'une trajectoire non planaire, que la buse entre en collision avec le substrat. Enfin, des passages peuvent être inaccessibles lors d'impression sur des pièces supports aux formes complexes. Ainsi, il est intéressant d'augmenter le nombre de degrés de liberté (\textbf{DDL}), au système. En le robotisant. l'état de surface des pièces imprimées est amélioré, il est possible d'imprimer de façon non planaire et d'éviter des collisions, ainsi que d'imprimer des pièces aux formes plus complexes.~\\
+    
+    Cette approche de robotisation a déjà commencé a être explorée au sein du laboratoire ICube dans le cadre d'un stage de fin d'étude où il était question de rendre étanche un actionneur pneumatique de forme cylindrique. Comme le montre le Figure~\ref{fig:schema_depincage}, il aurait été impossible d'utiliser un système cartésien dû aux collisions. C'est pourquoi une plateforme de faisabilité avait déjà été mise en place, composée d'un bras robot et d'un extrudeur monté dessus, permettant de dépincer l'outil. 
+
+    \begin{figure}[H]
+        \centering
+        \def\svgwidth{0.6\columnwidth}\input{figures/necessite_depincage.pdf_tex}
+        \caption{$(a)$ Actionneur cylindrique, $(b)$ Etanchéité souhaitée, $(c)$ Collision avec la buse en cartésien et $(d)$ Ajout d'un dépinçage}~\label{fig:schema_depincage}
+    \end{figure}
+
+    D'un côté, le travail effectué a mis en exergue que le dépinçage avait un impact sur la forme du cordon imprimé et d'un autre, que la  forme du cordon n'était pas constante même durant des trajectoires issues d'un tranchage classique. Le potentiel de la première partie et les problèmes cités dans la deuxième deviennent alors des sujets pertinents à considérer dans le cadre de ma thèse. Ils montrent tous deux qu'il y a un travail complet à faire sur la maîtrise de la robotisation de la dépose du silicone afin de maîtriser la forme du cordon le long de la trajectoire.
+
+
+\section*{Problématique du sujet de thèse et travail effectué}
+    
+        Le but de la thèse est de pouvoir imprimer des pièces 3D en silicone aux formes complexes à l'aide d'un système de FA robotisé. De ce fait, la partie robotique et la partie extrusion doivent être liés en concevant ce système qui nous aidera à maîtriser la forme du cordon. Pour cela, on se propose d'agir directement sur les paramètres d'impression, c'est-à-dire maîtriser la trajectoire, le débit, la vitesse de déplacement, l'orientation de la buse et la hauteur d'impression. 
+
+        La compléxité du silicone ainsi que le nombre de paramètres à maîtriser nous empêchent d'étudier le système en simulation, c'est pourquoi il faut passer par l'expérimentation pour faire de la dépose de silicone robotisé. Pour ceci, il y a une nécessité de concevoir une plateforme expérimentale. Elle devra répondre à une liste de besoin : travailler en multi-axes, imprimer du silicone sur un support maîtrisé et contrôlé et enfin mesurer les tests effectués. De plus l'ensemble du système devra aussi être lié logiciellement afin de contrôler tout l'environnement d'impression.  
+        
+        J'ai donc passé une partie de ma première année de thèse à la concevoir. Un nombre de paramètres étaient déjà en ma possession, tirés de la plateforme de faisabilité faite au laboratoire. Composée d'un robot multi-axes sur lequel est monté un extrudeur, tout deux partiellement intégrés logiciellment et matériellement de façon indépendante, elle m'a permis de prendre en main ces éléments et de faire mes premières impressions. Le robot est un KUKA LBR IIWA 14 et l'extrudeur une viscotec VIPROHEAD 5 extrudant du silicone monocomposant à l'aide d'un moteur pas à pas. Ils sont tous les deux contrôlés via Robot Operating System 2~(ROS2). Afin d'imprimer dans les meilleures conditions, j'ai pris l'initiative de créer une plateforme d'impression instrumentée, composée d'une structure d'impression modulaire sur laquelle imprimer. De plus, puisqu'on se focalise sur la forme du cordon, nous avons fait le choix d'utiliser un profilomètre laser KEYENCE LJ-X8080 afin de mesurer les impressions, et de l'actionner à la manière d'une imprimante 3D classique pour pouvoir faire du suivi durant l'impression. 
+
+        
+        \begin{figure}[H]
+            \centering
+            \def\svgwidth{0.8\columnwidth}\input{figures/laser_structure.pdf_tex}
+            \caption{Plateforme instrumentée}~\label{fig:laser_structure}
+        \end{figure}
+        
+
+        Durant les premiers tests avec cette plateforme, j'ai pu mener des tests quantitatifs qui m'ont permis de valider le choix du profilomètre vis à vis de notre application et de choisir le support d'impression le plus adéquat autant à la dépose de silicone qu'à la mesure profilométrique. 
+
+
+\section*{Deux axes de recherche priviligiés}
+
+    \subsection{Modélisation d'un cordon de silicone}
+        Une fois la plateforme d'impression instrumentée conçue, il est nécessaire de s'intéresser à quel type de tests nous allons mener, quelles données nous allons produire et comment nous allons les analyser et les caractériser afin de lier la partie robotique à la partie extrusion. 
+        Comme expliqué précédemment, nous nous intéressons à la forme du cordon le long de la trajectoire. 
+        Un cordon est représenté par la matière de silicone déposée sur le support d'impression, pouvant être une surface plane, un autre cordon ou encore un support non plat. Ce dernier est caractérisé par sa section transversale, pouvant être approximée par une forme circulaire, ellipsoïdale ou rectangulaire arrondie. Et enfin, il dépend des paramètres d'impression et de sa localisation dans la pièce. 
+
+        \begin{figure}[H]
+            \centering
+            \def\svgwidth{0.75\columnwidth}\input{figures/forme_cordon.pdf_tex}
+            \caption{Les différentes formes de section de cordon}~\label{fig:forme_cordon}
+        \end{figure}
+
+        Afin de la modéliser, plusieurs paramètres sont à considérés et apparaissent sur la Figure~\ref{fig:figure_variables}. Il est extrudé à travers une buse montée sur la viscotec de diamètre interne $d_i$, à une vitesse $v_e$. Cette buse se déplace selon une trajectoire donnée à une vitesse $v_d$ et à une hauteur $z_{buse}$ du substrat. Grâce à l'ajout de DDL, une inclinaison $\varphi(t)$ est appliquée à la buse. L'ensemble de ces paramètres ont un impact sur la forme du cordon, ici sur l'aire de la section $A_{cordon}$. 
+        
+        
+        \begin{figure}[H]
+            \centering
+            \def\svgwidth{0.7\columnwidth}\input{figures/figure_variable.pdf_tex}
+            \caption{Paramètres ayant une influence sur la forme du cordon}~\label{fig:figure_variables}
+        \end{figure}
+
+            
+        En considérant que ces paramètres dépendent temps et que le problème est complexe dû au problème multi-physique en jeu, il est pertinent de scinder en deux parties distinctes le travail afin de répondre au problème. Pour ceci, nous avons prévu deux axes de recherche pouvant être traités en parallèle~:~gérer l'impact des paramètres sur la forme du cordon et gérer la dynamique du silicone durant l'extrusion. Une fois ces deux parties maîtrisées, un lien entre la commande de débit d'extrusion et la vitesse de déplacement de la buse sera trouvé. 
+
+        Dans la littérature, beaucoup de recherches ont été menées afin de contrôler le débit en fonction de la vitesse d'avance et inversement, dans la fabrication additive en générale.~\cite{ma2023improving} et~\cite{wu2023modeling} ont trouvé un moyen de régler les problèmes de sous-extrusion et sur-extrusion en début et fin de trajectoire resectivement. Les premiers ont adapté le profil de débit au profil de vitesse, tandis que les deuxième ont joué sur l'avance et la rétractation du matériau dans l'extrudeur. Les paramètres tels que la hauteur d'impression, le dépinçage et la diamètre interne n'ont pas été pris en compte dans leur analyse. De plus, Ma et al ont choisi de négliger les phénomènes rhéologiques de l'impression des matières visqueuses en considérant que le diamètre du cordon imprimé été le même que le diamètre interne de la buse. 
+        D'autres comme [Comminal et al] se sont intéressés aux changements de forme du cordon, mais seulement comme étant une fonction de la hauteur d'impression et de la vitesse d'extrusion. 
+
+        D'après mes recherches, personne ne s'est focalisé sur la forme de la section transversale du cordon dans le but de gérer la vitesse d'extrusion le long d'une trajectoire. De plus, dans les systèmes multi-axes, aucune source ne regarde l'impact du dépinçage sur la forme du cordon, encore moins dans le cas d'impression de matières visco-élastiques telles que le silicone.
+
+
+    \subsection*{Axe 1~: Gestion de la forme d'un cordon}
+        Afin de gérer la forme du cordon le long de la trajectoire, nous avons mené des recherches afin d'établir un protocole expérimental. Dans l'état actuel des choses nous savons que pour un chemin de dépôt, soit un ensemble de point $P_i$ ordonnés, on peut avoir dans le domaine temporel le profil de vitesse de déplacement de la buse $v_d(t)$ associé ainsi que la pose de la buse dans le repère du robot $P_{buse}(t)$. Le vecteur $P_{buse}(t)$ contient les cordonnées cartésienne de la buse $x_{buse}(t), y_{buse}(t), z_{buse}(t)$ et son angle de dépinçage $\varphi(t)$. Ainsi, parmis tous les paramètres cités précédemment, il n'y a que deux inconnues : la vitesse d'extrusion $v_e(t)$ et la forme du cordon. 
+        De ce fait, pour la suite de ma thèse, on se propose de trouver un modèle qui donnerait la vitesse d'extrusion $v_e(t)$ en fonction d'un set de paramètres $\{v_d(t), z_{buse}(t), d_i, \varphi(t), A(t)\}$ donné. 
+
+        En sachant que les paramètres d'impression impactent la forme du cordon et que nous nous focalisons sur des mesures profilométriques, nous allons premièrement créer une base de données basée sur des profils de cordon, qui alimentera le modèle choisi. 
+        Pour la production de donnée, il y a quelques spécificité liées à la robotique à prendre en compte. Lors d'une trajectoire, la buse va subir des phases transitoires d'accélération et de décelération dû à la configuration du robot. De ce fait, nous avons fait le choix de produire cette base de données dans le cas le plus pertinent, soit en régime permanent où les vitesses d'extrusion et de déplacement seront constantes. Des profils de cordon seront mesurés pour chaque variation de paramètre. 
+
+        Une fois la base de donnée faite, un modèle sera entraîné afin de donner en sortie le profil de vitesse d'extrusion par rapport aux paramètres donnés en entré. Cette étape est encore en cours de réflexion, notamment sur le choix du modèle à utiliser. Les modèles physiques peuvent être écartés puisqu'ils ne sont pas compatibles avec la commande en temps réel. Puisque notre base de données sera assez conséquente, on peut se focaliser sur les modèles basés sur l'apprentissage. 
+
+
+
+
+    \subsection*{Axe 2~: Gestion de la dynamique d'extrusion}
+        Le but de ce deuxième axe de recherche est de pouvoir gérer la dynamique du silicone lors de l'extrusion. En effet, dû aux changement de vitesse durant la trajectoire et aux phases transistoires vues précédemment, le débit devra changer le long de cette dernier afin d'avoir la forme souhaitée. Il est facile de trouver le débit $Q_0$ pour une commande de débit $Q_0^*$ en régime permanent. Néanmoins, le débit est dynamique. A la façon de la vitesse de déplacement, celui-ci présente un temps de retard et un temps transitoire pendant lequel il est différent de la commande envoyée.
+        De plus, lorsuq'une buse est ajoutée, elle va avoir une influence sur le débit $Q_1$ en sa sortie, à cause des phénomènes rhéologiques comme le gonflement en sortie de filière. 
+
+        Dans cette partie, notre objectif serait de pouvoir connaître la relation qui lie la vitesse d'extrusion $v_e(t)$ au débit réel $Q_1$ en sortie de buse. Puisque nous n'avons pour le moment pas à notre disposition de capteur, nous souhaitons adopter une approche qui sera basée sur la récolte de données avec des outils d'intelligence artificielle. 
+
+
+
+
+\section{Conclusion et perspectives}
+    Pour conclure, durant les premiers mois de thèse j'ai commencé par effectuer de la bibliographie. Cela m'a permis d'apprivoiser le projet, que ce soit pour faire un état de l'art de ce qui se fait en FA de matière visqueuse, FA multi-axes, planification de trajectoire ou encore la gestion du débit et de la vitesse de déplacement. J'ai également pu rencontrer les personnes faisant parties du projet RAMSAI à deux reprises. Je me suis d'abord déplacée à Lyon pour rencontrer les membres de l'ICBMS~\footnote{Institut de chimie et biochimie moléculaires et supramoléculaires} et l'IMP~\footnote{Ingénierie des Matériaux Polymères} pour en apprendre plus sur l'aspect rhéologique du silicone et les différents moyens de l'évaluer. J'ai ensuite effectué une présentation de mon sujet de thèse avec les membres du projet au complet afin qu'ils puissent me rencontrer et parler de l'apport de mon sujet de recherche dans le cadre du projet. 
+
+    J'ai également conçu une plateforme d'impression instrumentée, modulaire et maîtrisée, ce qui m'a permis de prendre en main les différents éléments du système tels que le robot, l'extrudeur et la commande et communication logicielle de chaque élément sous ROS2. 
+
+    Enfin, pour ma deuxième année de thèse, deux axes de recherche sont à approfondir pour but de pouvoir gérer le débit d'extrusion en fonction de la vitesse d'extrusion sur une trajectoire donnée. D'un côté, on se focalisera sur la gestion de la forme du cordon en fonction des différents paramètres d'impression en construisant une base de donnée qui alimentera notre modèle. De l'autre, je chercherai à maîtriser la dynamique du silicone durant l'extrusion. 
+
+
+    \begin{figure}[H]
+        \centering
+        \def\svgwidth{0.9\columnwidth}\input{figures/resultats_jeremy.pdf_tex}
+        \caption{Résultats tirés de trajectoire effectuées avec la platefrome de faisabilité, }~\label{fig:resultats_jeremy}
+    \end{figure}
+
+
+    \begin{figure}[H]
+        \centering
+        \def\svgwidth{0.7\columnwidth}\input{figures/chronogrammes.pdf_tex}
+        \caption{Chronogramme de la vitesse commandée et la vitesse réelle, avec la zone de prise de mesure pour la base de donnée}~\label{fig:chronogrammes}
+    \end{figure} 
+
+\bibliographystyle{apalike}
+\bibliography{bibliographie}
+
+
+
+\end{document}

@@ -1,0 +1,35 @@
+\begin{thebibliography}{}
+
+\bibitem[Coulter et~al., 2019]{coulter2019bioinspired}
+Coulter, F.~B., Schaffner, M., Faber, J.~A., Rafsanjani, A., Smith, R., Appa,
+  H., Zilla, P., Bezuidenhout, D., and Studart, A.~R. (2019).
+\newblock Bioinspired heart valve prosthesis made by silicone additive
+  manufacturing.
+\newblock {\em Matter}, 1(1):266--279.
+
+\bibitem[Lefort and Brison, 1983]{lefort1983silicones}
+Lefort, M. and Brison, P. (1983).
+\newblock Les silicones{\textperiodcentered} synthese-proprietes-applications.
+\newblock In {\em Annales de chimie--science des mat{\'e}riaux}, volume~8, page
+  175. Masson.
+
+\bibitem[Ma et~al., 2023]{ma2023improving}
+Ma, Y., Potappel, J., Chauhan, A., Schutyser, M.~A., Boom, R.~M., and Zhang, L.
+  (2023).
+\newblock Improving 3d food printing performance using computer vision and
+  feedforward nozzle motion control.
+\newblock {\em Journal of Food Engineering}, 339:111277.
+
+\bibitem[Wu et~al., 2023]{wu2023modeling}
+Wu, P., Qian, C., and Okwudire, C.~E. (2023).
+\newblock Modeling and feedforward control of filament advancement and
+  retraction in material extrusion additive manufacturing.
+\newblock {\em Additive Manufacturing}, 78:103850.
+
+\bibitem[Zare et~al., 2021]{zare2021silicone}
+Zare, M., Ghomi, E.~R., Venkatraman, P.~D., and Ramakrishna, S. (2021).
+\newblock Silicone-based biomaterials for biomedical applications:
+  antimicrobial strategies and 3d printing technologies.
+\newblock {\em Journal of Applied Polymer Science}, 138(38):50969.
+
+\end{thebibliography}
