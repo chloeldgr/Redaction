@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.6)  25 JUN 2024 11:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.6)  25 JUN 2024 11:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,7 +549,7 @@ Package newfloat Info: `float' package detected.
 <figures/logo_ecoles.png, id=11, 2990.92406pt x 389.95688pt>
 File: figures/logo_ecoles.png Graphic file (type png)
 <use figures/logo_ecoles.png>
-Package pdftex.def Info: figures/logo_ecoles.png  used on input line 109.
+Package pdftex.def Info: figures/logo_ecoles.png  used on input line 108.
 (pdftex.def)             Requested size: 483.69687pt x 63.06079pt.
  [0
 
@@ -578,12 +578,7 @@ File: figures/Moulage_silicone.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/Moulage_silicone.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 483.69687pt x 100.53722pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
@@ -592,7 +587,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--146
  <./figures/applications.pdf> <./figures/Moulage_silicone.pdf
 
 pdfTeX warning: pdflatex (file ./figures/Moulage_silicone.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (figures/necessite_depincage.pdf_tex
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+(figures/necessite_depincage.pdf_tex
 <figures/necessite_depincage.pdf, id=75, page=1, 434.62375pt x 134.5025pt>
 File: figures/necessite_depincage.pdf Graphic file (type pdf)
 <use figures/necessite_depincage.pdf, page 1>
@@ -622,7 +622,7 @@ pdfTeX warning: pdflatex (file ./figures/laser_structure.pdf): PDF inclusion: mu
 
 pdfTeX warning: pdflatex (file ./figures/forme_cordon.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] (figures/figure_variable.pdf_tex
-<figures/figure_variable.pdf, id=136, page=1, 681.54625pt x 300.12125pt>
+<figures/figure_variable.pdf, id=134, page=1, 681.54625pt x 300.12125pt>
 File: figures/figure_variable.pdf Graphic file (type pdf)
 <use figures/figure_variable.pdf, page 1>
 Package pdftex.def Info: figures/figure_variable.pdf , page1 used on input line 56.
@@ -700,8 +700,8 @@ Here is how much of TeX's memory you used:
  578680 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,16n,93p,1213b,559s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1000.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsc1000.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (7 pages, 1889835 bytes).
+ <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1000.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsc1000.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\chloe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chloe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (7 pages, 1889794 bytes).
 PDF statistics:
  679 PDF objects out of 1000 (max. 8388607)
  26 named destinations out of 1000 (max. 500000)
